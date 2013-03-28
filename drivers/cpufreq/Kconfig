@@ -160,6 +160,7 @@ config CPU_FREQ_DEFAULT_GOV_SAVAGEDZEN
 	help
 	  Use the CPUFreq governor 'savagedzen' as default.
 
+
 endchoice
 
 config CPU_FREQ_GOV_PERFORMANCE
@@ -298,6 +299,12 @@ config CPU_FREQ_GOV_SAVAGEDZEN
 	help
 	   'Savaged-Zen' - a "smartass" based governor
 	   If in doubt, say N.
+
+config CPU_FREQ_GOV_DARKSIDE
+	tristate "'darkside' cpufreq governor"
+	depends on CPU_FREQ
+	help
+	  'darkside' - a "slightly more agressive smart" optimized governor!
 
 config CPU_FREQ_MIN_TICKS
 	int "Ticks between governor polling interval."
